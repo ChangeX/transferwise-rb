@@ -8,12 +8,12 @@ describe Transferwise::Request do
       Transferwise.remove_instance_variable :@api_base if Transferwise.instance_variable_defined? :@api_base
     end
 
-    it { is_expected.to eq 'https://api.sandbox.transferwise.tech' }
+    it { is_expected.to eq 'https://api.wise-sandbox.com' }
 
     context 'specifying a URL' do
       subject(:api_url) { Transferwise::Request.api_url('/v1/foo/bar') }
 
-      it { is_expected.to eq 'https://api.sandbox.transferwise.tech/v1/foo/bar' }
+      it { is_expected.to eq 'https://api.wise-sandbox.com/v1/foo/bar' }
     end
 
     context 'live mode' do
