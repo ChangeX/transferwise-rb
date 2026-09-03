@@ -4,7 +4,7 @@ require 'transferwise'
 require 'webmock/rspec'
 
 def stub_authed_request(method, action, access_token)
-  stub_request(method, 'https://api.sandbox.transferwise.tech' + action)
+  stub_request(method, 'https://api.wise-sandbox.com' + action)
     .with(
       headers: {
         'Authorization' => "Bearer #{access_token}",
