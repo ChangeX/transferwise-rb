@@ -47,7 +47,7 @@ module Transferwise
 
     def authorization_base
       live_url = 'https://api.transferwise.com'
-      test_url = 'https://api.wise-sandbox.com'
+      test_url = 'https://wise-sandbox.com'
       @authorization_base ||= mode == 'live' ? live_url : test_url
     end
   end
